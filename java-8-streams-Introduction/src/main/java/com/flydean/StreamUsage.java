@@ -26,16 +26,15 @@ public class StreamUsage {
         list.add("abc");
         list.add("ccc");
         list.add("ddd");
-        Stream<String> listStream = list.stream();
         list.parallelStream().forEach(element -> doPrint(element));
 
         //Operations
         long count = list.stream().distinct().count();
 
         //Matching
-        boolean isValid = list.stream().anyMatch(element -> element.contains("h")); // true
-        boolean isValidOne = list.stream().allMatch(element -> element.contains("h")); // false
-        boolean isValidTwo = list.stream().noneMatch(element -> element.contains("h")); // false
+        boolean isValid = list.stream().anyMatch(element -> element.contains("h"));
+        boolean isValidOne = list.stream().allMatch(element -> element.contains("h"));
+        boolean isValidTwo = list.stream().noneMatch(element -> element.contains("h"));
 
         //Filtering
         Stream<String> filterStream = list.stream().filter(element -> element.contains("d"));
@@ -46,6 +45,8 @@ public class StreamUsage {
         //FlatMap
         List<CustBook> users = new ArrayList<>();
         users.add(new CustBook());
+        Stream<Stream<String>> userStreamMap
+                = users.stream().map(user -> user.getBookName().stream());
         Stream<String> userStream
                 = users.stream().flatMap(user -> user.getBookName().stream());
 
