@@ -13,6 +13,8 @@
         <module>functional-interface</module>
         <module>lambda-if-else</module>
         <module>break-stream-foreach</module>
+        <module>Spliterator</module>
+        <module>stream-formap</module>
     </modules>
 
     <dependencies>
