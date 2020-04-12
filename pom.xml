@@ -12,6 +12,7 @@
         <module>java-8-streams-Introduction</module>
         <module>functional-interface</module>
         <module>lambda-if-else</module>
+        <module>break-stream-foreach</module>
     </modules>
 
     <dependencies>
