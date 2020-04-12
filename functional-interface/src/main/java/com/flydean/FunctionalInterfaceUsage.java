@@ -59,4 +59,5 @@ public class FunctionalInterfaceUsage {
                 .reduce(0, (i1, i2) -> i1 + i2);
 
     }
+
 }
