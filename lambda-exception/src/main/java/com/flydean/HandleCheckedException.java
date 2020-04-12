@@ -27,13 +27,13 @@ public class HandleCheckedException {
             }
         });
 
-        integers.forEach(throwingConsumerWrapper(i -> throwIOException(i)));
-        integers.forEach(handlingConsumerWrapper(
+        integers.forEach(consumerWrapper(i -> throwIOException(i)));
+        integers.forEach(consumerWrapperWithExceptionClass(
                 i -> throwIOException(i), IOException.class));
 
     }
 
-    static <T> Consumer<T> throwingConsumerWrapper(
+    static <T> Consumer<T> consumerWrapper(
             ThrowingConsumer<T, Exception> throwingConsumer) {
 
         return i -> {
@@ -45,7 +45,7 @@ public class HandleCheckedException {
         };
     }
 
-    static <T, E extends Exception> Consumer<T> handlingConsumerWrapper(
+    static <T, E extends Exception> Consumer<T> consumerWrapperWithExceptionClass(
             ThrowingConsumer<T, E> throwingConsumer, Class<E> exceptionClass) {
 
         return i -> {

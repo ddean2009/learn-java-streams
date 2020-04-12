@@ -26,7 +26,7 @@ public class HandleUncheckedException {
         integers.forEach(lambdaWrapper(i -> System.out.println(1 / i)));
 
         integers.forEach(
-                consumerWrapper(
+                consumerWrapperWithExceptionClass(
                         i -> System.out.println(1 / i),
                         ArithmeticException.class));
 
@@ -45,7 +45,7 @@ public class HandleUncheckedException {
     }
 
     static <T, E extends Exception> Consumer<T>
-    consumerWrapper(Consumer<T> consumer, Class<E> clazz) {
+    consumerWrapperWithExceptionClass(Consumer<T> consumer, Class<E> clazz) {
 
         return i -> {
             try {
