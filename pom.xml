@@ -15,6 +15,7 @@
         <module>break-stream-foreach</module>
         <module>Spliterator</module>
         <module>stream-formap</module>
+        <module>stream-peek</module>
     </modules>
 
     <dependencies>
