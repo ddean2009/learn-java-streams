@@ -16,6 +16,7 @@
         <module>Spliterator</module>
         <module>stream-formap</module>
         <module>stream-peek</module>
+        <module>lambda-exception</module>
     </modules>
 
     <dependencies>
