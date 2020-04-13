@@ -18,6 +18,7 @@
         <module>stream-peek</module>
         <module>lambda-exception</module>
         <module>rethrow-exception</module>
+        <module>Collectors</module>
     </modules>
 
     <dependencies>
