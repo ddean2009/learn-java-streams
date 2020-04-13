@@ -17,6 +17,7 @@
         <module>stream-formap</module>
         <module>stream-peek</module>
         <module>lambda-exception</module>
+        <module>rethrow-exception</module>
     </modules>
 
     <dependencies>
