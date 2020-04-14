@@ -20,6 +20,7 @@
         <module>rethrow-exception</module>
         <module>Collectors</module>
         <module>stream-reduce</module>
+        <module>customCollector</module>
     </modules>
 
     <dependencies>
