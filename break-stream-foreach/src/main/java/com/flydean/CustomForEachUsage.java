@@ -17,7 +17,7 @@ public class CustomForEachUsage {
         Stream<Integer> ints = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         List<Integer> result = new ArrayList<>();
         CustomForEach.forEach(ints, (elem, breaker) -> {
-            if (elem.intValue() % 2 == 0) {
+            if (elem >= 5 ) {
                 breaker.stop();
             } else {
                 result.add(elem);

@@ -24,7 +24,7 @@ public class CustomSpliteratorUsage {
     public static void main(String[] args) {
         Stream<Integer> ints = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         List<Integer> result =
-          takeWhile(ints, x -> x.intValue() % 2 != 0)
+          takeWhile(ints, x -> x < 5 )
                         .collect(Collectors.toList());
         log.info(result.toString());
     }
