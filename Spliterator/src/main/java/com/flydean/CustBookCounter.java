@@ -13,13 +13,9 @@ public class CustBookCounter {
 
     private int counter;
 
-//    public CustBookCounter accumulate(CustBook custBook) {
-//        if (author.getRelatedArticleId() == 0) {
-//            return isRelated ? this : new RelatedAuthorCounter( counter, true);
-//        } else {
-//            return isRelated ? new RelatedAuthorCounter(counter + 1, false) : this;
-//        }
-//    }
+    public CustBookCounter accumulate(CustBook custBook) {
+        return new CustBookCounter(counter+1);
+    }
 
     public CustBookCounter combine(CustBookCounter custBookCounter) {
         return new CustBookCounter(

@@ -36,19 +36,10 @@ public class SpliteratorUsage {
         Spliterator<CustBook> split1 = SpliteratorUsage.generateElements().spliterator();
         Spliterator<CustBook> split2 = split1.trySplit();
 
-        log.info("before splite: {}",split1.estimateSize());
+        log.info("before tryAdvance: {}",split1.estimateSize());
         log.info("Characteristics {}",split1.characteristics());
         log.info(call(split1));
         log.info(call(split2));
-        log.info("after splite {}",split1.estimateSize());
+        log.info("after tryAdvance {}",split1.estimateSize());
     }
-
-//    private int countAutors(Stream<CustBook> stream) {
-//        CustBookCounter wordCounter = stream.reduce(
-//                new CustBookCounter(0, true),
-//                CustBookCounter::accumulate,
-//                CustBookCounter::combine);
-//        return wordCounter.getCounter();
-//    }
-
 }
