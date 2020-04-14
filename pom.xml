@@ -19,6 +19,7 @@
         <module>lambda-exception</module>
         <module>rethrow-exception</module>
         <module>Collectors</module>
+        <module>stream-reduce</module>
     </modules>
 
     <dependencies>
