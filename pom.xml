@@ -21,6 +21,7 @@
         <module>Collectors</module>
         <module>stream-reduce</module>
         <module>customCollector</module>
+        <module>predicate-chain</module>
     </modules>
 
     <dependencies>
