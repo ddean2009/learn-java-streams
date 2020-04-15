@@ -70,7 +70,7 @@ public class PredicateChainUsage {
 
     @Test
     public void combiningPredicateCollection(){
-        List<Predicate<String>> allPredicates = new ArrayList<Predicate<String>>();
+        List<Predicate<String>> allPredicates = new ArrayList<>();
         allPredicates.add(a -> a.startsWith("a"));
         allPredicates.add(a -> a.length() > 1);
 
