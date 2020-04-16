@@ -23,6 +23,7 @@
         <module>customCollector</module>
         <module>predicate-chain</module>
         <module>Infinite-stream</module>
+        <module>stream-cust-threadpool</module>
     </modules>
 
     <dependencies>
