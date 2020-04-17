@@ -24,6 +24,7 @@
         <module>predicate-chain</module>
         <module>Infinite-stream</module>
         <module>stream-cust-threadpool</module>
+        <module>fail-safe-fail-fast</module>
     </modules>
 
     <dependencies>
